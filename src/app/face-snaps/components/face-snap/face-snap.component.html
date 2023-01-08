@@ -1,0 +1,7 @@
+<!-- ajout de la classe .snapped si on a déjà liké -->
+<div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'Déjà liké' }">
+    <!-- | uppercase : est un pipe pour mettre les textes en maj -->
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <p>{{ faceSnap.description }}</p>
+    <button (click)="onViewFaceSnap()">VIEW</button>
+</div>

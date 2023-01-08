@@ -1,0 +1,36 @@
+.form-card {
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 3px grey;
+    padding: 30px;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    h2 {
+        margin: 0;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .form-group {
+        display: flex;
+        padding: 5px 0 5px;
+        label, textarea, input {
+            width: 50%;
+        }
+        label {
+            font-weight: 500;
+        }
+    }
+    form .action-buttons {
+        width: 100px;
+        margin: auto;
+        padding-top: 20px;
+        button {
+            width: 100%;
+            background-color: white;
+            padding: 10px;
+            border: none;
+            box-shadow: 2px 2px 7px grey;
+            font-weight: 700;
+        }
+    }
+}

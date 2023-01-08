@@ -1,0 +1,10 @@
+<header>
+    <h1>snapface</h1>
+    <nav>
+        <!-- routerLinkActive permet d'attribuer une classe au lien lorsque la route est active ou l'un de ses enfants -->
+        <!-- routerLinkActiveOptions permet de désactiver l'option active lorsque l'un des enfants est actif-->
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="facesnaps" routerLinkActive="active">FaceSnaps</a>
+    </nav>
+    <button (click)="onAddNewFaceSnap()">+</button>
+</header>

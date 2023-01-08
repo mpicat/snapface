@@ -1,0 +1,28 @@
+.landing-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+}
+
+.landing-block img {
+  width: 50%;
+}
+
+.landing-links {
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=landing-page.component.css.map */

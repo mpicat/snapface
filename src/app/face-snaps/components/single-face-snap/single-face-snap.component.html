@@ -1,0 +1,19 @@
+<div class="container-card">
+    <div class="face-snap-card" *ngIf="faceSnap$ | async as faceSnap" [ngClass]="{ snapped: buttonText === 'Déjà liké' }">
+        <h2>{{ faceSnap.title | uppercase }}</h2>
+        <!-- en mettant / devant facesnaps on revient à la racine -->
+        <a routerLink="/facesnaps">Back</a>
+        <p>Mis en ligne le {{ faceSnap.createdDate | date: "d MMMM yyyy à HH:mm" }}</p>
+        <div class="face-snap-card__img">
+            <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+        </div>
+        <p>{{ faceSnap.description }}</p>
+        <p *ngIf="faceSnap.location === 'Gotham'">Dernière localisation connue : {{ faceSnap.location }}</p>
+        <p>
+            <button (click)="onSnap(faceSnap.id)">{{ buttonText }}</button>
+            <!-- nombre de likes devient de plus en plus vert selon le nbre -->
+            <!-- en multipliant, on augmente la sensibilité -->
+            <span [ngStyle]="{ color: 'rgb(0,'+ faceSnap.snaps*2 +',0)' }"> 👍 {{ faceSnap.snaps }}</span>
+        </p>
+    </div>
+</div>
